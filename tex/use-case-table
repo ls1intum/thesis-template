@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt,twoside]{report}
+
+\usepackage[german,english]{babel}
+\usepackage{booktabs}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\newcommand{\closeline}[1]{\underline{\smash{#1}}}
+\newcommand{\leftenum}[2]{\begin{enumerate}[leftmargin=*]\item[#1] #2\end{enumerate}}
+\newcommand{\rightenum}[2]{\begin{enumerate}[leftmargin=3cm]\item[#1] #2\end{enumerate}}
+%First arg: Enumeration character, second: item. Important: use "\item ..." as second argument
+\newcommand{\shortitem}[2]{\begin{minipage}[t]{#1}\begin{itemize}[noitemsep,leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt] #2 \end{itemize}\end{minipage}}
+%First argument: Width of the minipage, second: items. Important: use "\item ..." as second argument
+
+\begin{document}
+
+\chapter{Scenario Template}
+
+\begin{longtable}{p{0.2387\textwidth} p{0.7\textwidth}}
+\toprule
+\raggedright \textit{Scenario name} & \closeline{name}\tabularnewline
+\hline
+\endhead
+\raggedright \textit{Participating actor instances} & \raggedright bob:, alice:\tabularnewline
+\hline
+\raggedright \textit{Flow of events}&
+\begin{minipage}[t]{0.7\textwidth}
+	\begin{itemize}[noitemsep,leftmargin=*,topsep=0pt,parsep=0pt,partopsep=0pt]
+   		\item[1.]
+   		\item[2.]
+   \end{itemize}
+\end{minipage}
+\tabularnewline
+\bottomrule
+\caption{Scenario caption here}
+\label{scenarioLabelHere}
+\end{longtable}
+
+\chapter{Use Case Template}
+\begin{longtable}{p{0.2387\textwidth} p{0.7\textwidth}}
+\toprule
+\raggedright \textit{Use case name} & name \tabularnewline
+\hline
+\endhead
+\raggedright \textit{Participating actors} & Initiated by \newline Communicates with \tabularnewline
+\hline
+\raggedright \textit{Flow of events} & \begin{minipage}[t]{0.7\textwidth}
+	\leftenum{1.}{Initiator}
+	\rightenum{2.}{System response}
+
+%Definition of left/right enum: new commands introduced due to readability. Same goes fore \shortitem
+
+\end{minipage}
+\smallskip\tabularnewline
+\hline
+\raggedright \textit{Entry condition} & \shortitem{0.7\textwidth}{\item Something.}\tabularnewline
+\hline
+\raggedright \textit{Exit condition} & \shortitem{0.7\textwidth}{\item  Something else.}
+\smallskip\tabularnewline
+\hline
+\raggedright \textit{Quality requirements} & \shortitem{0.7\textwidth}{\item Quality}\tabularnewline
+ \bottomrule
+\caption{Use Case caption here}
+\label{useCaseLabelHere}
+\end{longtable}
+
+\end{document}
