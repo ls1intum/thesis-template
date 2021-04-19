@@ -14,14 +14,14 @@
 \usepackage{fancyhdr}
 \usepackage{color}
 \usepackage{booktabs}
-\usepackage[pdftex,bookmarks=true,plainpages=false,pdfpagelabels=true]{hyperref}
+\usepackage[pdftex,bookmarks=true,plainpages=false,pdfpagelabels=true]{hyperref}	%TODO make yourself familiar with \label, \ref and \hyperref for referencing figures, tables, chapters, etc.
 \usepackage{mdwlist}
 \usepackage{enumerate}
 \usepackage{array}
 \usepackage{longtable}
-\usepackage{listings}
 \usepackage[utf8]{inputenc}
 \usepackage[capitalize, noabbrev]{cleveref}
+\usepackage{wasysym}
 
 % Path for graphics
 \graphicspath{{figures/}}
@@ -54,7 +54,7 @@
 \newpage
 \thispagestyle{empty}
 \mbox{}
-\include{tex/disclaimer}
+\include{tex/disclaimer}		%TODO choose one of 'diploma | bachelor's | master's thesis' in the disclaimer file
 
 \newpage
 \thispagestyle{empty}
@@ -220,16 +220,16 @@ Cite \cite{bruegge2004object} several times in this chapter.}
 
 \subsubsection{Visionary Scenarios}
 
-\textit{Note: Describe 1-2 visionary scenario here, i.e. a scenario that would perfectly solve your problem, even if it might not be realizable. use our scenario description template in form of free text description.}
+\textit{Note: Describe 1-2 visionary scenario here, i.e. a scenario that would perfectly solve your problem, even if it might not be realizable. Use our scenario description template (./tex/use-case-table.tex) in form of free text description.}
 
 \subsubsection{Demo Scenarios}
 
-\textit{Note: Describe 1-2 demo scenario here, i.e. a scenario that you can implement and demonstrate until the end of your thesis. use our scenario description template in form of free text description.}
+\textit{Note: Describe 1-2 demo scenario here, i.e. a scenario that you can implement and demonstrate until the end of your thesis. Use our scenario description template (./tex/use-case-table.tex) in form of free text description.}
 
 \subsection{Use Case Model}
 
 \textit{Note: This subsection should contain a UML Use Case Diagram including roles and their use cases. You can use colors to indicate priorities. Think about splitting the diagram into multiple ones if you have more than 10 use cases.
-\textbf{Important:} Make sure to describe the most important use cases using the use case table template. Also describe the rationale of the use case model, i.e. why you modeled it like you show it in the diagram.}
+\textbf{Important:} Make sure to describe the most important use cases using the use case table template (./tex/use-case-table.tex). Also describe the rationale of the use case model, i.e. why you modeled it like you show it in the diagram.}
 
 \subsection{Analysis Object Model}
 
@@ -282,7 +282,7 @@ It contains a rationale of the selected storage scheme, file system or database,
 
 \section{Global Software Control}
 
-\textit{Note: Optional section describing describing the control flow of the system, in particular, whether a monolithic, event-driven control flow or concurrent processes have been selected, how requests are initiated and specific synchronization issues}
+\textit{Note: Optional section describing the control flow of the system, in particular, whether a monolithic, event-driven control flow or concurrent processes have been selected, how requests are initiated and specific synchronization issues}
 
 
 \section{Boundary Conditions}
@@ -334,6 +334,12 @@ It contains a rationale of the selected storage scheme, file system or database,
 \section{Status}
 
 \textit{Note: Describe honestly the achieved goals (e.g. the well implemented and tested use cases) and the open goals here. if you only have achieved goals, you did something wrong in your analysis.}
+
+\begin{itemize}
+	\item [\Circle]
+	\item [\LEFTcircle]
+	\item [\CIRCLE]
+\end{itemize}
 
 \subsection{Realized Goals}
 
