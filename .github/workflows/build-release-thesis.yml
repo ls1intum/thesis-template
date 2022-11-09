@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@main
+        uses: actions/checkout@master
         with:
           fetch-depth: '0'
       - name: Create initial tag
@@ -20,7 +20,7 @@ jobs:
           fi
       - name: Bump version and push tag
         id: bump
-        uses: anothrNick/github-tag-action@main
+        uses: anothrNick/github-tag-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
@@ -36,7 +36,7 @@ jobs:
           draft: false
           prerelease: false
       - name: Compile LaTeX document
-        uses: dante-ev/latex-action@main
+        uses: dante-ev/latex-action@master
         with:
           root_file: ./thesis.tex
       - name: Upload Release Asset
