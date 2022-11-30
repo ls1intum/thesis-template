@@ -3,6 +3,17 @@ A Latex Template for your bachelor / master thesis
 
 Please note: This is only a template. You have to adapt the template to your thesis and discuss the structure of your thesis with your supervisor
 
+## Build PDFs locally 
+
+```bash
+latexmk -pdf
+```
+
+Clean temp files: 
+```
+latexmk -CA
+```
+
 ## Build and release a PDF automatically
 
 This template contains a GitHub workflow that automatically builds the LaTeX document and creates a release on GitHub with the built PDF.
