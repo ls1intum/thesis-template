@@ -49,59 +49,38 @@
 
 \include{tex/cover}
 \include{tex/titlepage}
-\newpage
-\thispagestyle{empty}
-\mbox{}
-\include{tex/disclaimer}		%TODO choose one of 'diploma | bachelor's | master's thesis' in the disclaimer file
 
 \newpage
 \thispagestyle{empty}
 \mbox{}
+\include{tex/disclaimer}
 
-\chapter*{Acknowledgements}
-
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\include{tex/acknowledgement}
 
 \pagenumbering{roman}
 
 \selectlanguage{english}
-\begin{abstract}
+\include{tex/abstract_en}
 
-%abstract english
-
-\textit{Note:}
-
-\textit{\textbf{1. paragraph:} What is the motivation of your thesis? Why is it interesting from a scientific point of view? Which main problem do you like to solve?}
-
-\textit{\textbf{2. paragraph:} What is the purpose of the document? What is the main content, the main contribution?}
-
-\textit{\textbf{3. paragraph:} What is your methodology? How do you proceed?}
-
-\end{abstract}
 
 \clearpage
 
 \selectlanguage{german}
-\begin{abstract}
-
-%abstract german
-\textit{Note: Insert the German translation of the English abstract here.}
-
-\end{abstract}
+\include{tex/abstract_de}
 
 \clearpage
 
 \selectlanguage{english}
-
 
 \tableofcontents
 \clearpage
 
 \clearpage
 
-\begin{acronym}
-\acro{GUI}{Graphical User Interface}
-
-\end{acronym}
+\include{tex/acronym}
 
 \pagenumbering{arabic}
 
