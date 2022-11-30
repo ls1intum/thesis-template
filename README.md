@@ -3,7 +3,18 @@ A Latex Template for your bachelor / master thesis
 
 Please note: This is only a template. You have to adapt the template to your thesis and discuss the structure of your thesis with your supervisor
 
-## Build PDFs locally 
+## Usage 
+### Set thesis metadata 
+Fill in your thesis details in the `metadata` file: 
+        - Degree
+        - Study program 
+        - German and english title
+        - Advisor and supervisor 
+        - Your name
+        - The relevant dates 
+
+
+### Build PDFs locally 
 
 ```bash
 latexmk -pdf
