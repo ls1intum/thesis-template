@@ -1,0 +1,43 @@
+\input{common/preamble.tex}
+\usepackage[nolist]{acronym}
+
+\def\proposal{Proposal for}
+
+\begin{document}
+\setlength{\evensidemargin}{22pt}
+\setlength{\oddsidemargin}{22pt}
+
+
+
+\hypersetup{pdfborder={0 0 0}, pdfauthor={\author}, pdftitle={\title}}
+
+\lstset{showspaces=false, numbers=left, frame=single, basicstyle=\small}
+
+
+\include{thesis_tex/titlepage}
+
+\selectlanguage{english}
+\pagenumbering{arabic}
+
+\fancyhead{}
+\pagestyle{fancy}
+\fancyhead[LE]{\slshape \leftmark}
+\fancyhead[RO]{\slshape \rightmark}
+\headheight=15pt
+
+
+\section*{Introduction}
+\section*{Problem}
+\section*{Motivation}
+\section*{Objective}
+\section*{Schedule}
+
+
+
+\clearpage
+\include{common/acronyms}
+\clearpage
+\bibliography{thesis}
+\bibliographystyle{alpha}
+
+\end{document}

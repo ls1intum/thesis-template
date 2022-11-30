@@ -1,3 +1,4 @@
+\def\proposal{}
 \def\degree{Master}                         %TODO adjust to your program
 \def\program{Informatics}
 \def\title{(title english)}		    %TODO add title in English
@@ -6,3 +7,4 @@
 \def\advisor{Jolanda Krümelmonster, M.Sc.}  %TODO add advisor name
 \def\author{(author)}			    %TODO add author name
 \def\date{(handover date)}		    %TODO add submission / handover date
+\def\startdate{(start date)}		    %TODO add startdate
