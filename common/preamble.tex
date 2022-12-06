@@ -24,8 +24,27 @@
 \usepackage[utf8]{inputenc}
 \usepackage[capitalize, noabbrev]{cleveref}
 \usepackage{wasysym}
+\usepackage{todonotes}
 
 % Path for graphics
 \graphicspath{{figures/}}
 
+% Include the Thesis metadata like title, author, etc. 
 \include{metadata}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom Commands for this template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Annotate feedback you received 
+\newcommand{\feedback}[1]{\todo[inline,color=green,caption={}]{#1}}
+
+% State what is missing in this spot
+\newcommand{\missing}[1]{\todo[inline,color=yellow,caption={}]{#1}}
+
+% Inline to do note: 
+\newcommand{\TODO}[1]{\todo[inline,caption={}]{#1}}
+
+
+
+
