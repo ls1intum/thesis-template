@@ -1,20 +1,26 @@
+% Add common preamble to the document
 \input{common/preamble.tex}
-\usepackage[nolist]{acronym}
-
 \def\proposal{Proposal for}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theses specific packages go here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[nolist]{acronym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin of document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \setlength{\evensidemargin}{22pt}
 \setlength{\oddsidemargin}{22pt}
-
 
 
 \hypersetup{pdfborder={0 0 0}, pdfauthor={\author}, pdftitle={\title}}
 
 \lstset{showspaces=false, numbers=left, frame=single, basicstyle=\small}
 
-
-\include{thesis_tex/titlepage}
+%------- Title setup -------
+\include{common/titlepage}
 
 \selectlanguage{english}
 \pagenumbering{arabic}
@@ -25,6 +31,7 @@
 \fancyhead[RO]{\slshape \rightmark}
 \headheight=15pt
 
+%------- Start of Proposal -------
 \TODO{Before you start with your thesis, have a look at our guides on confluence! \url{https://confluence.ase.in.tum.de/display/EduResStud/How+to+thesis}}
 \section*{Introduction}
         \missing{ Introduction
@@ -34,6 +41,7 @@
                         \item What are the tools in use?
                 \end{itemize}
         }
+
 \section*{Problem}
         \missing{ Problem description
                 \begin{itemize}
@@ -43,6 +51,7 @@
                         \item Present the negative consequences in detail 
                 \end{itemize}
         }
+        
 \section*{Motivation}
         \missing{ Thesis Motivation
                 \begin{itemize}
@@ -52,12 +61,14 @@
                         \item If applicable, motivate with existing research, previous work 
                 \end{itemize}
         }
+        
 \section*{Objective}
         \missing{ Thesis Objective
                 \begin{itemize}
                         \item What are the main goals of your thesis?
                 \end{itemize}
         }
+        
 \section*{Schedule}
         \missing{ Thesis Schedule
                 \begin{itemize}

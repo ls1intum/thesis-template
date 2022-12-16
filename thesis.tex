@@ -1,9 +1,19 @@
+% Add common preamble to the document
 \input{common/preamble.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theses specific packages go here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[printonlyused]{acronym}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin of document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 \setlength{\evensidemargin}{22pt}
 \setlength{\oddsidemargin}{22pt}
-
 
 
 \hypersetup{pdfborder={0 0 0}, pdfauthor={\author}, pdftitle={\title}}
@@ -12,14 +22,17 @@
 
 \pagenumbering{alph}
 
-\include{thesis_tex/cover}
-\include{thesis_tex/titlepage}
+%------- Cover and Title setup -------
+\include{common/cover}
+\include{common/titlepage}
 
+%------- Disclaimer -------
 \newpage
 \thispagestyle{empty}
 \mbox{}
 \include{thesis_tex/disclaimer}
 
+%------- Acknowledgements -------
 \newpage
 \thispagestyle{empty}
 \mbox{}
@@ -27,26 +40,23 @@
 
 \pagenumbering{roman}
 
+%------- Abstracts -------
 \selectlanguage{english}
 \include{thesis_tex/abstract_en}
-
-
 \clearpage
-
 \selectlanguage{german}
 \include{thesis_tex/abstract_de}
-
 \clearpage
-
 \selectlanguage{english}
 
+%------- Table of contents -------
 \tableofcontents
 \clearpage
 
 \clearpage
 
+%------- Common Acronyms -------
 \include{common/acronyms}
-
 \pagenumbering{arabic}
 
 \fancyhead{}
