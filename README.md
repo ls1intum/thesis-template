@@ -13,12 +13,12 @@ __Please thorougly read our guidelines and hints on [confluence](https://conflue
 ## Usage 
 ### Set thesis metadata 
 Fill in your thesis details in the `metadata` file: 
-* Degree
-* Study program 
-* German and English title
-* Advisor and supervisor 
-* Your name
-* The submission date
+* Degree (Bachelor or Master)
+* Your study program
+* English and German title
+* Advisor and supervisor
+* Your name (without e-mail address or matriculation number)
+* The start and submission date
 
 ### Build PDFs locally 
 
