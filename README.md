@@ -1,7 +1,7 @@
 # thesis-template
-A Latex Template for your bachelor / master thesis
+A Latex template for your Bachelor's or Master's thesis.
 
-Please note: This is only a template. You have to adapt the template to your thesis and discuss the structure of your thesis with your supervisor!
+_Please note:_ This is only a template. You have to adapt the template to your thesis and discuss the structure of your thesis with your supervisor!
 
 --- 
 ## Guidelines 
