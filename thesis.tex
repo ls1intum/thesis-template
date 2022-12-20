@@ -1,44 +1,19 @@
-\documentclass[a4paper,12pt,twoside]{report}
+% Add common preamble to the document
+\input{common/preamble.tex}
 
-\usepackage[scaled]{helvet}
-\usepackage{acronym}
-\usepackage{url}
-\usepackage{cite}
-\usepackage{listings}
-\usepackage[pdftex]{graphicx}
-\usepackage[hang,small,bf]{caption}
-\usepackage{styles/tum}
-\usepackage{setspace}
-\usepackage[german,english]{babel}
-\usepackage{float}
-\usepackage{floatflt}
-\usepackage{fancyhdr}
-\usepackage{color}
-\usepackage{booktabs}
-\usepackage[pdftex,bookmarks=true,plainpages=false,pdfpagelabels=true]{hyperref}	%TODO make yourself familiar with \label, \ref and \hyperref for referencing figures, tables, chapters, etc.
-\usepackage{mdwlist}
-\usepackage{enumerate}
-\usepackage{array}
-\usepackage{longtable}
-\usepackage[utf8]{inputenc}
-\usepackage[capitalize, noabbrev]{cleveref}
-\usepackage{wasysym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theses specific packages go here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[printonlyused]{acronym}
 
-% Path for graphics
-\graphicspath{{figures/}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin of document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 \setlength{\evensidemargin}{22pt}
 \setlength{\oddsidemargin}{22pt}
-
-\def\degree{Master}
-\def\program{Informatics}
-\def\title{(title english)}		%TODO add title in English
-\def\titleGer{(title german)}	%TODO add title in German
-\def\supervisor{Prof. Dr. Stephan Krusche}
-\def\advisor{Jolanda Krümelmonster, M.Sc.}
-\def\author{(author)}			%TODO add author name
-\def\date{(handover date)}		%TODO add submission / handover date
 
 
 \hypersetup{pdfborder={0 0 0}, pdfauthor={\author}, pdftitle={\title}}
@@ -47,62 +22,41 @@
 
 \pagenumbering{alph}
 
-\include{tex/cover}
-\include{tex/titlepage}
+%------- Cover and Title setup -------
+\include{common/cover}
+\include{common/titlepage}
+
+%------- Disclaimer -------
 \newpage
 \thispagestyle{empty}
 \mbox{}
-\include{tex/disclaimer}		%TODO choose one of 'diploma | bachelor's | master's thesis' in the disclaimer file
+\include{thesis_tex/disclaimer}
 
+%------- Acknowledgements -------
 \newpage
 \thispagestyle{empty}
 \mbox{}
-
-\chapter*{Acknowledgements}
-
+\include{thesis_tex/acknowledgement}
 
 \pagenumbering{roman}
 
+%------- Abstracts -------
 \selectlanguage{english}
-\begin{abstract}
-
-%abstract english
-
-\textit{Note:}
-
-\textit{\textbf{1. paragraph:} What is the motivation of your thesis? Why is it interesting from a scientific point of view? Which main problem do you like to solve?}
-
-\textit{\textbf{2. paragraph:} What is the purpose of the document? What is the main content, the main contribution?}
-
-\textit{\textbf{3. paragraph:} What is your methodology? How do you proceed?}
-
-\end{abstract}
-
+\include{thesis_tex/abstract_en}
 \clearpage
-
 \selectlanguage{german}
-\begin{abstract}
-
-%abstract german
-\textit{Note: Insert the German translation of the English abstract here.}
-
-\end{abstract}
-
+\include{thesis_tex/abstract_de}
 \clearpage
-
 \selectlanguage{english}
 
-
+%------- Table of contents -------
 \tableofcontents
 \clearpage
 
 \clearpage
 
-\begin{acronym}
-\acro{GUI}{Graphical User Interface}
-
-\end{acronym}
-
+%------- Common Acronyms -------
+\include{common/acronyms}
 \pagenumbering{arabic}
 
 \fancyhead{}
