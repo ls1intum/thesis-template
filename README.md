@@ -1,7 +1,7 @@
 # thesis-template
-A Latex Template for your bachelor / master thesis
+A Latex template for your Bachelor's or Master's thesis.
 
-Please note: This is only a template. You have to adapt the template to your thesis and discuss the structure of your thesis with your supervisor!
+_Please note:_ This is only a template. You have to adapt the template to your thesis and discuss the structure of your thesis with your supervisor!
 
 --- 
 ## Guidelines 
@@ -13,13 +13,12 @@ __Please thorougly read our guidelines and hints on [confluence](https://conflue
 ## Usage 
 ### Set thesis metadata 
 Fill in your thesis details in the `metadata` file: 
-        - Degree
-        - Study program 
-        - German and english title
-        - Advisor and supervisor 
-        - Your name
-        - The relevant dates 
-
+* Degree (Bachelor or Master)
+* Your study program
+* English and German title
+* Advisor and supervisor
+* Your name (without e-mail address or matriculation number)
+* The start and submission date
 
 ### Build PDFs locally 
 
