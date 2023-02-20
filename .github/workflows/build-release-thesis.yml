@@ -35,11 +35,11 @@ jobs:
           release_name: Version ${{ steps.bump.outputs.new_tag }}
           draft: false
           prerelease: false
-      - name: Compile LaTeX document
+      - name: Compile LaTeX document - Thesis
         uses: dante-ev/latex-action@master
         with:
           root_file: ./thesis.tex
-      - name: Upload Release Asset
+      - name: Upload Release Asset - Thesis
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -47,4 +47,17 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./thesis.pdf
           asset_name: thesis.pdf
+          asset_content_type: application/pdf
+      - name: Compile LaTeX document - Proposal
+        uses: dante-ev/latex-action@master
+        with:
+          root_file: ./proposal.tex
+      - name: Upload Release Asset - Proposal
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./proposal.pdf
+          asset_name: proposal.pdf
           asset_content_type: application/pdf
