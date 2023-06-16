@@ -5,12 +5,15 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   build_release_thesis:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
         with:
           fetch-depth: '0'
       - name: Create initial tag
@@ -20,19 +23,17 @@ jobs:
           fi
       - name: Bump version and push tag
         id: bump
-        uses: anothrNick/github-tag-action@master
+        uses: anothrNick/github-tag-action@1.67.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
           DEFAULT_BUMP: 'patch'
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.bump.outputs.new_tag }}
-          release_name: Version ${{ steps.bump.outputs.new_tag }}
+          name: Version ${{ steps.bump.outputs.new_tag }}
           draft: false
           prerelease: false
       - name: Compile LaTeX document - Thesis
