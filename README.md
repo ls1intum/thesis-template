@@ -1,4 +1,9 @@
-# thesis-template
+# Deprected
+This repository is deprecated and will not be maintained any more. We will soon archive it.
+
+Please use https://github.com/ls1intum/thesis-template-typst based on [Typst](https://typst.app) instead which is easier, faster and more fun!
+
+## thesis-template
 A Latex template for your Bachelor's or Master's thesis.
 
 _Please note:_ This is only a template. You have to adapt the template to your thesis and discuss the structure of your thesis with your supervisor!
