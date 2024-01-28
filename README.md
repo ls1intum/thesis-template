@@ -1,4 +1,4 @@
-# Deprected
+# Deprecated
 This repository is deprecated and will not be maintained any more. We will soon archive it.
 
 Please use https://github.com/ls1intum/thesis-template-typst based on [Typst](https://typst.app) instead which is easier, faster and more fun!
